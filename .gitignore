@@ -1,0 +1,31 @@
+# terragrunt gitignore
+**/.*.sw?
+**/.idea
+**/terragrunt.iml
+**/vendor
+**/.terraform
+**/.vscode
+**/*.tfstate
+**/*.tfstate.*
+**/*.out
+**/.terragrunt-cache
+**/.bundle
+**/.ruby-version
+**/.terraform.lock.hcl
+**/.terraform*
+**/.terragrunt*
+**/.ssh*
+# bash ignore
+**/.ash_history*
+**/.aws*
+**/.kube*
+**/.npm*
+**/.nvm*
+**/.config*
+
+
+# packer ignore
+**/*.pkvar*
+
+# ansible ignore
+**/*.ansible*
