@@ -1,5 +1,4 @@
-
-module "nginx-apps" {
+module "nginx-core" {
   source = "git::https://github.com/hernanku/infra-devops.git//terraform/vmware/vsphere/single-vm-cloud"
   vsphere_server_url = "10.23.1.11"
   vsphere_user       = "administrator@vsphere.local"
@@ -7,7 +6,7 @@ module "nginx-apps" {
   vsphere_datacenter = "dc-east"
   vsphere_cluster    = "lab-cluster"
   vm_datastore = "vmData"
-  vm_name            = "nginx-apps"
+  vm_name            = "nginx-core"
   vm_disk_size = 50
   vm_dns_search_domain = "labz.io"
   vm_domain = "labz.io"
@@ -20,3 +19,4 @@ module "nginx-apps" {
   vm_dns_server = "10.23.1.9"
 
 }
+
