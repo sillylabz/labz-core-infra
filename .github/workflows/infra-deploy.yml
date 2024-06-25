@@ -4,9 +4,9 @@ env:
   BASE_TERRAFORM_DIR: "terraform"
   INFRA_SERVICE: "sql-dbs"
   ENVIRONMENT: dev
-  TF_VARS_vsphere_password: "${{ VSPHERE_PASSWORD }}"
-  TF_VARS_vsphere_server: "${{ VSPHERE_PASSWORD }}"
-  TF_VARS_vm_network_name: "${{ VSPHERE_PASSWORD }}"
+  TF_VARS_vsphere_password: "${{ secrets.VSPHERE_PASSWORD }}"
+  TF_VARS_vsphere_server: "${{ secrets.VSPHERE_PASSWORD }}"
+  TF_VARS_vm_network_name: "${{ secrets.VSPHERE_PASSWORD }}"
 
 
 on:
