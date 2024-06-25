@@ -13,8 +13,8 @@ on:
   push:
     branches:
       - dev
-    paths:
-      - "${{ BASE_TERRAFORM_DIR }}/${{ INFRA_SERVICE }}"
+    # paths:
+    #   - "${{ BASE_TERRAFORM_DIR }}/${{ INFRA_SERVICE }}"
 
 jobs:
   defaults:
