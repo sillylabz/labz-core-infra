@@ -1,16 +1,16 @@
-vsphere_server = "vcenter.example.com"
+vsphere_server = "tc-vcenter.techcove.io"
 vsphere_user = "administrator@vsphere.local"
 vsphere_password = ""
-datacenter_name = "Datacenter"
-cluster_name = "Cluster1"
-datastore_name = "Datastore"
+datacenter_name = "dc-east"
+cluster_name = "lab-cluster1"
+datastore_name = "vmData"
 
 environment = "dev"
 project = "infra"
 app = "tools"
 
 
-vm_network_name = "VM Network"
+vm_network_name = "pubNet-dev"
 template_name = "ubuntu22-templ-cloudinit-gold"
-vm_default_dns_server = "192.168.1.1"
+vm_default_dns_server = "10.55.202.1"
 
