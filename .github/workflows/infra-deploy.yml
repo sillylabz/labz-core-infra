@@ -1,0 +1,43 @@
+name: labz infra deployment
+
+env:
+  BASE_TERRAFORM_DIR: "terraform"
+  INFRA_SERVICE: "sql-dbs"
+  ENVIRONMENT: dev
+  TF_VARS_vsphere_password: "${{ VSPHERE_PASSWORD }}"
+  TF_VARS_vsphere_server: "${{ VSPHERE_PASSWORD }}"
+  TF_VARS_vm_network_name: "${{ VSPHERE_PASSWORD }}"
+
+
+on:
+  push:
+    branches:
+      - dev
+    paths:
+      - "${{ BASE_TERRAFORM_DIR }}/${{ INFRA_SERVICE }}"
+
+jobs:
+  defaults:
+    working_directory: "${{ BASE_TERRAFORM_DIR }}/${{ INFRA_SERVICE }}"
+  dev_plan:
+    name: terraform plan
+    runs-on: self-hosted
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.7.5
+
+      - name: Terraform init
+        run: terraform init
+
+      - name: Terraform validate
+        run: terraform validate
+
+      - name: Terraform plan
+        run: terraform plan -var-file $ENVIRONMENT.tfvars
+
+

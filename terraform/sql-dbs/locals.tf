@@ -9,4 +9,3 @@ locals {
   template_metadata_file = "${path.module}/templates/metadata-tpl.yaml"
   vm_default_dns_server = var.vm_default_dns_server
 }
-
