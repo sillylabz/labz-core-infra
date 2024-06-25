@@ -1,0 +1,4 @@
+#cloud-config
+runcmd:
+  - [ "growpart", "/dev/sda", "3" ]
+  - [ "lvresize", "--extents", "+100%FREE", "--resizefs", "/dev/ubuntu-vg/ubuntu-lv" ]
