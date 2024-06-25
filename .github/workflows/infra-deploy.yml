@@ -17,9 +17,9 @@ on:
     #   - "${{ BASE_TERRAFORM_DIR }}/${{ INFRA_SERVICE }}"
 
 jobs:
-  defaults:
-    working_directory: "${{ BASE_TERRAFORM_DIR }}/${{ INFRA_SERVICE }}"
   dev_plan:
+    defaults:
+      working_directory: "${{ BASE_TERRAFORM_DIR }}/${{ INFRA_SERVICE }}"
     name: terraform plan
     runs-on: self-hosted
     steps:
