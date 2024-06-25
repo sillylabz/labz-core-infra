@@ -20,7 +20,8 @@ jobs:
   dev_plan:
     runs-on: self-hosted
     defaults:
-      working-directory: "${{ BASE_TERRAFORM_DIR }}/${{ INFRA_SERVICE }}"
+      run:
+        working-directory: "${{ BASE_TERRAFORM_DIR }}/${{ INFRA_SERVICE }}"
     name: terraform plan
     steps:
       - name: Checkout repo
