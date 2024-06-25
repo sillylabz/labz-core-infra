@@ -18,10 +18,11 @@ on:
 
 jobs:
   dev_plan:
-    defaults:
-      working_directory: "${{ BASE_TERRAFORM_DIR }}/${{ INFRA_SERVICE }}"
-    name: terraform plan
     runs-on: self-hosted
+    defaults:
+      runs:
+        working-directory: "${{ BASE_TERRAFORM_DIR }}/${{ INFRA_SERVICE }}"
+    name: terraform plan
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
