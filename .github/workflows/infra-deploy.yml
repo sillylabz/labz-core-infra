@@ -19,8 +19,8 @@ on:
 jobs:
   dev_plan:
     runs-on: 
-      group: "org/Default"
-      labels: [ self-hosted ]
+      group: Default
+      labels: [ self-hosted, linux, ]
     defaults:
       run:
         working-directory: "${{ env.BASE_TERRAFORM_DIR }}/${{ env.INFRA_SERVICE }}"
