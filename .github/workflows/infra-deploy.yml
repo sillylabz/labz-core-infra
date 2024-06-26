@@ -19,7 +19,7 @@ on:
 jobs:
   dev_plan:
     runs-on: 
-      group: sillylabz/Default
+      group: organization/Default
       labels: [ self-hosted ]
     defaults:
       run:
