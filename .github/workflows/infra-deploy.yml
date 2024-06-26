@@ -18,7 +18,9 @@ on:
 
 jobs:
   dev_plan:
-    runs-on: self-hosted
+    runs-on: 
+      group: sillylabz/Default
+      labels: [ self-hosted ]
     defaults:
       run:
         working-directory: "${{ env.BASE_TERRAFORM_DIR }}/${{ env.INFRA_SERVICE }}"
