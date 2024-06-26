@@ -19,7 +19,7 @@ on:
 jobs:
   dev_plan:
     runs-on: 
-      group: organization/Default
+      group: org/Default
       labels: [ self-hosted ]
     defaults:
       run:
