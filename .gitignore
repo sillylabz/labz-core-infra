@@ -16,7 +16,7 @@
 **/.terragrunt*
 **/.ssh*
 # bash ignore
-**/.ash_history*
+**/.*ash_history*
 **/.aws*
 **/.kube*
 **/.npm*
